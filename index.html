@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="The wedding celebration of Alexander and Mika."
+  />
+
+  <title>Duta & Risa — Wedding</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       OPENING SCREEN
+  ====================================================== -->
+
+  <div
+    id="opening"
+    class="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--cream)]"
+  >
+
+    <div class="px-6 text-center">
+
+      <p
+        class="mb-5 text-xs uppercase tracking-[0.4em] text-[var(--brown)]"
+      >
+        The Wedding Of
+      </p>
+
+      <h1
+        class="font-display text-6xl text-[var(--brown-dark)] sm:text-8xl"
+      >
+        Duta
+        <span class="block text-4xl italic sm:text-5xl">
+          &
+        </span>
+        Risa
+      </h1>
+
+      <p class="mt-6 text-sm tracking-[0.3em] text-[var(--brown)]">
+        20 · 09 · 2026
+      </p>
+
+      <button
+        id="open-button"
+        class="mt-10 border border-[var(--brown)] px-8 py-3 text-xs uppercase tracking-[0.25em] text-[var(--brown-dark)] transition hover:bg-[var(--burgundy)] hover:text-[var(--white)]"
+      >
+        Open Invitation
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MUSIC
+  ====================================================== -->
+
+  <button
+    id="music-button"
+    class="fixed right-5 top-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[var(--white-soft)] bg-[var(--black-soft)] text-[var(--white)] backdrop-blur"
+    aria-label="Toggle music"
+  >
+    ♫
+  </button>
+
+  <audio
+    id="wedding-music"
+    loop
+  >
+    <source src="./music/wedding-song.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <section
+    id="home"
+    class="hero-image flex min-h-screen items-end justify-center px-6 pb-20 text-center text-[var(--white)]"
+  >
+
+    <div class="max-w-3xl">
+
+      <p
+        class="mb-5 text-xs uppercase tracking-[0.45em]"
+      >
+        We are getting married
+      </p>
+
+      <h1
+        class="font-display text-7xl leading-none sm:text-9xl"
+      >
+        Duta
+      </h1>
+
+      <p
+        class="my-3 font-display text-4xl italic sm:text-5xl text-[var(--gold)]"
+      >
+        &
+      </p>
+
+      <h1
+        class="font-display text-7xl leading-none sm:text-9xl"
+      >
+        Risa
+      </h1>
+
+      <div class="mx-auto mt-10 h-px w-16 bg-[var(--gold)]"></div>
+
+      <p
+        class="mt-6 text-sm uppercase tracking-[0.35em]"
+      >
+        20 September 2026
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <section
+    class="bg-[var(--cream)] px-6 py-28 text-center"
+  >
+
+    <div class="reveal mx-auto max-w-2xl">
+
+      <p
+        class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+      >
+        Together with our families
+      </p>
+
+      <h2
+        class="mt-5 font-display text-5xl text-[var(--brown-dark)] sm:text-6xl"
+      >
+        We invite you
+      </h2>
+
+      <p
+        class="mx-auto mt-8 max-w-xl text-sm leading-8 text-[var(--brown)]"
+      >
+        With joyful hearts, we invite you to celebrate
+        the beginning of our new chapter together.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       COUPLE
+  ====================================================== -->
+
+  <section
+    id="story"
+    class="bg-[var(--cream-dark)] px-6 py-28"
+  >
+
+    <div class="mx-auto max-w-5xl">
+
+      <div class="reveal mb-16 text-center">
+
+        <p
+          class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+        >
+          The Couple
+        </p>
+
+        <h2
+          class="mt-4 font-display text-5xl text-[var(--brown-dark)] sm:text-6xl"
+        >
+          Our Story
+        </h2>
+
+      </div>
+
+
+      <div
+        class="grid items-center gap-12 md:grid-cols-2"
+      >
+
+        <!-- Photo -->
+
+        <div class="reveal">
+
+          <img
+            src="./images/couple.jpg"
+            alt="Duta and Risa"
+            class="h-[500px] w-full object-cover"
+          >
+
+        </div>
+
+
+        <!-- Text -->
+
+        <div class="reveal">
+
+          <p
+            class="font-display text-4xl text-[var(--brown-dark)]"
+          >
+            Duta
+            <span class="italic">&</span>
+            Risa
+          </p>
+
+          <div
+            class="my-6 h-px w-12 bg-[var(--gold)]"
+          ></div>
+
+          <p
+            class="text-sm leading-8 text-[var(--brown)]"
+          >
+            Two people, two stories, one beautiful
+            journey.
+
+            What started as a simple meeting slowly
+            became a collection of memories, laughter,
+            dreams, and countless moments together.
+
+            And now, we are ready to begin our next
+            chapter.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       COUNTDOWN
+  ====================================================== -->
+
+  <section
+    class="bg-[var(--brown-dark)] px-6 py-24 text-center text-[var(--white)]"
+  >
+
+    <div class="reveal">
+
+      <p
+        class="text-xs uppercase tracking-[0.35em] text-[var(--ivory)]"
+      >
+        Counting down to forever
+      </p>
+
+      <h2
+        class="mt-4 font-display text-5xl"
+      >
+        Our Wedding Day
+      </h2>
+
+
+      <div
+        class="mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-3"
+      >
+
+        <div>
+          <p
+            id="days"
+            class="font-display text-4xl sm:text-6xl"
+          >
+            00
+          </p>
+
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-[var(--white-muted)]"
+          >
+            Days
+          </span>
+        </div>
+
+
+        <div>
+          <p
+            id="hours"
+            class="font-display text-4xl sm:text-6xl"
+          >
+            00
+          </p>
+
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-[var(--white-muted)]"
+          >
+            Hours
+          </span>
+        </div>
+
+
+        <div>
+          <p
+            id="minutes"
+            class="font-display text-4xl sm:text-6xl"
+          >
+            00
+          </p>
+
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-[var(--white-muted)]"
+          >
+            Minutes
+          </span>
+        </div>
+
+
+        <div>
+          <p
+            id="seconds"
+            class="font-display text-4xl sm:text-6xl"
+          >
+            00
+          </p>
+
+          <span
+            class="text-[10px] uppercase tracking-[0.2em] text-[var(--white-muted)]"
+          >
+            Seconds
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       EVENT
+  ====================================================== -->
+
+  <section
+    id="event"
+    class="bg-[var(--cream)] px-6 py-28"
+  >
+
+    <div class="mx-auto max-w-5xl">
+
+      <div class="reveal text-center">
+
+        <p
+          class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+        >
+          Save the date
+        </p>
+
+        <h2
+          class="mt-4 font-display text-5xl text-[var(--brown-dark)]"
+        >
+          Wedding Events
+        </h2>
+
+      </div>
+
+
+      <div
+        class="mt-16 grid gap-px bg-[var(--cream-dark)] md:grid-cols-2"
+      >
+
+        <!-- Akad -->
+
+        <div
+          class="reveal bg-[var(--cream)] p-10 text-center"
+        >
+
+          <p
+            class="text-xs uppercase tracking-[0.3em] text-[var(--gold)]"
+          >
+            Ceremony
+          </p>
+
+          <h3
+            class="mt-5 font-display text-4xl text-[var(--brown-dark)]"
+          >
+            Akad Nikah
+          </h3>
+
+          <p
+            class="mt-6 text-sm leading-7 text-[var(--brown)]"
+          >
+            Jumat, 18 September 2026
+            <br>
+            09:00 WIB - Selesai
+          </p>
+
+          <div
+            class="my-6 mx-auto h-px w-10 bg-[var(--gold)]"
+          ></div>
+
+          <p
+            class="text-sm text-[var(--brown)]"
+          >
+            dirumah mempelai wanita
+            <br>
+            <!-- Malang, Indonesia -->
+          </p>
+
+        </div>
+
+
+        <!-- Reception -->
+
+        <div
+          class="reveal bg-[var(--cream)] p-10 text-center"
+        >
+
+          <p
+            class="text-xs uppercase tracking-[0.3em] text-[var(--gold)]"
+          >
+            Celebration
+          </p>
+
+          <h3
+            class="mt-5 font-display text-4xl text-[var(--brown-dark)]"
+          >
+            Reception
+          </h3>
+
+          <p
+            class="mt-6 text-sm leading-7 text-[var(--brown)]"
+          >
+            Saturday, 20 September 2026
+            <br>
+            00:00 WIB - selesai
+          </p>
+
+          <div
+            class="my-6 mx-auto h-px w-10 bg-[var(--gold)]"
+          ></div>
+
+          <p
+            class="text-sm text-[var(--brown)]"
+          >
+            Perumahan Graha Puntadewa Blok D2/17 
+            <br>
+            Pakisjajar, Pakis, Kab. Malang, Jawa Timur, 65154
+         
+          </p>
+
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-block border border-[var(--brown)] px-7 py-3 text-xs uppercase tracking-[0.2em] transition hover:bg-[var(--burgundy)] hover:text-[var(--white)]"
+          >
+            View Location
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       GALLERY
+  ====================================================== -->
+
+  <section
+    id="gallery"
+    class="bg-[var(--cream-dark)] px-6 py-28"
+  >
+
+    <div class="mx-auto max-w-6xl">
+
+      <div class="reveal text-center">
+
+        <p
+          class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+        >
+          Memories
+        </p>
+
+        <h2
+          class="mt-4 font-display text-5xl text-[var(--brown-dark)]"
+        >
+          Our Moments
+        </h2>
+
+      </div>
+
+
+      <div
+        class="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4"
+      >
+
+        <div
+          class="gallery-item reveal col-span-2 row-span-2"
+        >
+          <img
+            src="./images/gallery-01.jpg"
+            alt="Wedding memory"
+            class="h-full min-h-[400px] w-full object-cover"
+          >
+        </div>
+
+
+        <div
+          class="gallery-item reveal"
+        >
+          <img
+            src="./images/gallery-02.jpg"
+            alt="Wedding memory"
+            class="h-48 w-full object-cover md:h-64"
+          >
+        </div>
+
+
+        <div
+          class="gallery-item reveal"
+        >
+          <img
+            src="./images/gallery-03.jpg"
+            alt="Wedding memory"
+            class="h-48 w-full object-cover md:h-64"
+          >
+        </div>
+
+
+        <div
+          class="gallery-item reveal"
+        >
+          <img
+            src="./images/gallery-04.jpg"
+            alt="Wedding memory"
+            class="h-48 w-full object-cover md:h-64"
+          >
+        </div>
+
+
+        <div
+          class="gallery-item reveal"
+        >
+          <img
+            src="./images/gallery-05.jpg"
+            alt="Wedding memory"
+            class="h-48 w-full object-cover md:h-64"
+          >
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       RSVP
+  ====================================================== -->
+
+  <section
+    id="rsvp"
+    class="bg-[var(--cream)] px-6 py-28"
+  >
+
+    <div class="reveal mx-auto max-w-xl text-center">
+
+      <p
+        class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+      >
+        Kindly respond
+      </p>
+
+      <h2
+        class="mt-4 font-display text-5xl text-[var(--brown-dark)]"
+      >
+        RSVP
+      </h2>
+
+      <p
+        class="mt-6 text-sm leading-7 text-[var(--brown)]"
+      >
+        Your presence means the world to us.
+        Please let us know if you can join our
+        special day.
+      </p>
+
+
+      <form
+        id="rsvp-form"
+        class="mt-10 text-left"
+      >
+
+        <label
+          class="text-xs uppercase tracking-[0.15em] text-[var(--brown-dark)]"
+        >
+          Name
+        </label>
+
+        <input
+          id="guest-name"
+          type="text"
+          required
+          placeholder="Your name"
+          class="mt-2 w-full border-b border-[var(--gold)] bg-transparent px-0 py-4 outline-none transition focus:border-[var(--burgundy)]"
+        >
+
+
+        <label
+          class="mt-8 block text-xs uppercase tracking-[0.15em] text-[var(--brown-dark)]"
+        >
+          Attendance
+        </label>
+
+        <select
+          id="attendance"
+          class="mt-2 w-full border-b border-[var(--gold)] bg-transparent px-0 py-4 outline-none"
+        >
+
+          <option value="yes">
+            Joyfully attending
+          </option>
+
+          <option value="no">
+            Regretfully unable to attend
+          </option>
+
+        </select>
+
+
+        <button
+          type="submit"
+          class="mt-10 w-full bg-[var(--burgundy)] py-4 text-xs uppercase tracking-[0.25em] text-[var(--white)] transition hover:bg-[var(--burgundy-dark)]"
+        >
+          Confirm Attendance
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       GIFT
+  ====================================================== -->
+
+  <section
+    class="bg-[var(--cream-dark)] px-6 py-28 text-center"
+  >
+
+    <div class="reveal mx-auto max-w-xl">
+
+      <p
+        class="text-xs uppercase tracking-[0.35em] text-[var(--gold)]"
+      >
+        Wedding Gift
+      </p>
+
+      <h2
+        class="mt-4 font-display text-5xl text-[var(--brown-dark)]"
+      >
+        Your kindness
+      </h2>
+
+      <p
+        class="mt-6 text-sm leading-8 text-[var(--brown)]"
+      >
+        Your presence is already the greatest gift.
+        For those who wish to bless us further,
+        we are grateful for your generosity.
+      </p>
+
+
+      <div
+        class="mt-10 border border-[var(--gold)] p-8"
+      >
+
+        <p
+          class="text-xs uppercase tracking-[0.2em] text-[var(--brown-dark)]"
+        >
+          Bank Account
+        </p>
+
+        <p
+          class="mt-4 font-display text-3xl text-[var(--brown-dark)]"
+        >
+          BCA
+        </p>
+
+        <p
+          id="account-number"
+          class="mt-2 text-lg tracking-[0.15em] text-[var(--brown-dark)]"
+        >
+          1234567890
+        </p>
+
+        <p
+          class="mt-2 text-sm text-[var(--brown)]"
+        >
+          Duta
+        </p>
+
+        <button
+          id="copy-account"
+          class="mt-6 border border-[var(--brown)] px-6 py-2 text-xs uppercase tracking-[0.2em] text-[var(--brown-dark)] transition hover:bg-[var(--burgundy)] hover:text-[var(--white)]"
+        >
+          Copy Number
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CLOSING
+  ====================================================== -->
+
+  <section
+    class="flex min-h-[70vh] items-center justify-center bg-[var(--brown-dark)] px-6 text-center text-[var(--white)]"
+  >
+
+    <div class="reveal">
+
+      <p
+        class="text-xs uppercase tracking-[0.35em] text-[var(--white-muted)]"
+      >
+        With love
+      </p>
+
+      <h2
+        class="mt-6 font-display text-7xl sm:text-9xl"
+      >
+        Duta
+        <span class="text-5xl italic text-[var(--gold)]">
+          &
+        </span>
+        Risa
+      </h2>
+
+      <p
+        class="mt-8 text-sm tracking-[0.25em] text-[var(--white-muted)]"
+      >
+        20 September 2026
+      </p>
+
+      <div
+        class="mx-auto mt-8 h-px w-12 bg-[var(--gold)]"
+      ></div>
+
+      <p
+        class="mt-8 text-sm text-[var(--white-muted)]"
+      >
+        Thank you for being part of our story.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer
+    class="bg-[var(--dark)] px-6 py-8 text-center text-xs text-[var(--white-muted)]"
+  >
+
+    <p>
+      Made with love · Duta & Risa
+    </p>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+
+  <script src="./js/main.js"></script>
+
+</body>
+</html>

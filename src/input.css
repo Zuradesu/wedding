@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* =========================
+   CUSTOM VARIABLES
+========================= */
+
+:root {
+  --cream: #f8f5f0;
+  --cream-dark: #eee8df;
+  --brown: #756457;
+  --brown-dark: #3d352f;
+  --gold: #b59a78;
+  --white: #ffffff;
+
+  --burgundy: #641d20;
+  --burgundy-dark: #3a1717;
+
+  --wine: #4a1719;
+
+  --olive: #4a4b35;
+  --olive-light: #73735a;
+
+  --ivory: #e9e1d2;
+
+  --dark: #17120f;
+
+  --gold-dark: #8f7650;
+}
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: white;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.font-display {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 0.25em;
+}
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+#opening {
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+#opening.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-image {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition: transform 0.7s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#music-button {
+  transition: transform 0.3s ease;
+}
+
+#music-button.playing {
+  animation: rotateMusic 3s linear infinite;
+}
+
+@keyframes rotateMusic {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+  .hero-image {
+    background-position: center;
+  }
+}
